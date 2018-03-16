@@ -6,7 +6,7 @@
 package br.com.satc;
 
 import br.com.satc.objeto.Disciplina;
-import br.com.satc.objeto.Pessoa;
+import br.com.satc.objeto.Professor;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -43,7 +43,30 @@ public class Main {
             disciplinasDisponiveis += "\n" + materias.lastIndexOf(materia) + " " + materia.getNome();
         }
 
-       
+        List<Professor> prof = new ArrayList<>();
+        do {
+               String nome, rg, cpf;
+              Date dataNascimento;
+              SimpleDateFormat conversor = new SimpleDateFormat("dd/MM/yyyy");
+            
+
+             nome = JOptionPane.showInputDialog("Informe seu Nome: ");
+             rg = JOptionPane.showInputDialog("Informe seu RG: ");
+             cpf = JOptionPane.showInputDialog("Informe seu CPF: ");
+              dataNascimento = conversor.parse(JOptionPane.showInputDialog("informe a Data de Nascimento: "));
+           //  prof.add(new Professor(nome,rg,cpf,dataNascimento));
+        } while ((JOptionPane.showConfirmDialog(null, "Deseja Continuar?")) == 0);
+        // String professorCadastrado = "";
+        //  for (Professor cadastro : prof) {
+        //    professorCadastrado += "\n" + prof.lastIndexOf(cadastro) + " "
+        //            + "\n" + cadastro.getNome() + " "
+        //            + "\n" + cadastro.getRg() + " "
+        //            + "\n" + cadastro.getCpf() + " "
+        //            + "\n" + cadastro.getIdade() + " Anos";
+        // }
+
+        //JOptionPane.showMessageDialog(null, disciplinasDisponiveis);
+        //JOptionPane.showMessageDialog(null, professorCadastrado);
     }
 
 }
