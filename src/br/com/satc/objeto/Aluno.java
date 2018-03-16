@@ -22,8 +22,8 @@ public class Aluno extends Pessoa {
         return "Aluno{" + "matricula=" + matricula + ", dataMatricula=" + dataMatricula + ", Disciplinas=" + Disciplinas + '}';
     }
 
-    public Aluno(int matricula, Date dataMatricula, String nome, String rg, String cpf, int idade, Date dataNascimento) {
-        super(nome, rg, cpf, idade, dataNascimento);
+    public Aluno(int matricula, Date dataMatricula, String nome, String rg, String cpf, Date dataNascimento) {
+        super(nome, rg, cpf, dataNascimento);
         this.matricula = matricula;
         this.dataMatricula = dataMatricula;
     }

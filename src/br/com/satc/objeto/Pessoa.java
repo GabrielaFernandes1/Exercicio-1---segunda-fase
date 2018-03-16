@@ -14,23 +14,23 @@ import java.util.Date;
  */
 public abstract class Pessoa {
 
-    String nome;
-    String rg;
-    String cpf;
-   private int idade;
-   Date dataNascimento;
+    private String nome;
+    private String rg;
+    private String cpf;
+    private int idade;
+    private Date dataNascimento;
 
     @Override
     public String toString() {
-        return "Pessoa{" + "nome=" + nome + ", rg=" + rg + ", cpf=" + cpf + ", idade=" + idade + ", dataNascimento=" + dataNascimento + '}';
+        return "Pessoa{" + "nome=" + nome + ", rg=" + rg + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + '}';
     }
 
-    public Pessoa(String nome, String rg, String cpf, int idade, Date dataNascimento) {
+    public Pessoa(String nome, String rg, String cpf, Date dataNascimento) {
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
-        this.idade = this.calculaIdade(dataNascimento);
         this.dataNascimento = dataNascimento;
+        this.idade = this.calculaIdade(dataNascimento);
     }
    
     
