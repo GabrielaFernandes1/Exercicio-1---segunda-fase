@@ -124,18 +124,34 @@ public class Main {
                     break;
                 }
                 case 4: {
-
+                    
                     for (Disciplina x : materias) {
-                        JOptionPane.showMessageDialog(null, "Disciplina: " + x.getNome() + "\n" + "Departamento: " + x.getDepartamento() + "\n" + "Status: " + x.getStatus());
+                       JOptionPane.showMessageDialog(null, "Disciplina: " + x.getNome() + "\n" + "Departamento: " + x.getDepartamento() + "\n" + "Status: " + x.getStatus());
 
                     }
                     break;
                 }
                 case 5: {
-
-                    for (Professor x : prof) {
-                        JOptionPane.showMessageDialog(null, x.getNome() + "\n" + x.getRg() + "\n" + x.getCpf() + "\n" + x.getDataNascimento());
+                    
+                    for (int i = 0; i < prof.size(); i++) {
+                       JOptionPane.showMessageDialog(null, prof);
                     }
+
+                   // for (Professor x : prof) {
+                    //    JOptionPane.showMessageDialog(null,"Professor: " + x.getNome() + "\n" + "RG: " + x.getRg() + "\n" + "CPF: " + x.getCpf() + "\n" + "Data de Nascimento: " + x.getDataNascimento()
+                    //     + "\n" + "Disciplina: " + x.getDisciplinas());
+                   // }
+                }
+                case 6: {
+                    
+                    for (int i = 0; i < alun.size(); i++) {
+                        JOptionPane.showMessageDialog(null, alun);
+                    }
+                    
+                   // for (Aluno x : alun){
+                      //  JOptionPane.showMessageDialog(null,"Aluno: " + x.getNome() + "\n" + "RG: " + x.getRg() + "\n" + "CPF: " + x.getCpf() + "\n" + "Data de Nascimento: " + x.getDataNascimento()
+                       //  + "\n" + "Número de Matricula: " + x.getMatricula() + "\n" + "Data de Matricula: " + x.getDataMatricula() + "\n" + "Disciplina: " + x.getDisciplinas());
+                   // }
                 }
 
             }
